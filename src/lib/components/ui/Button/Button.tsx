@@ -1,8 +1,9 @@
-import React, { forwardRef, ReactElement } from 'react';
+'use client';
 
+import { ButtonHTMLAttributes, forwardRef, ReactElement } from 'react';
 import './Button.css';
 
-interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'primary' | 'alter' | 'icon';
 	text?: string;
 	icon?: ReactElement;
