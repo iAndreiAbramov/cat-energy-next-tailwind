@@ -14,7 +14,7 @@ export const HeaderMobile: React.FC = () => {
 			className={cn(
 				'relative',
 				'flex items-center justify-between',
-				'px-[20px] pb-[18px] pt-[10px]',
+				'container pb-[18px] pt-[10px]',
 			)}
 		>
 			<LogoMobileIcon />

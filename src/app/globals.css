@@ -11,6 +11,16 @@ body {
     min-height: 100vh;
 
     & * {
-        outline: 1px solid lightblue;
+        /*outline: 1px solid lightblue;*/
+    }
+}
+
+@layer components {
+    .container {
+        @apply
+        px-[20px]
+        md:px-[30px]
+        xl:px-0
+        max-w-[1220px]
     }
 }
