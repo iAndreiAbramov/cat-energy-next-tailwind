@@ -7,20 +7,30 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     font-family: var(--font-oswald), Arial, sans-serif;
-    min-height: 100vh;
 
     & * {
         /*outline: 1px solid lightblue;*/
     }
 }
 
-@layer components {
-    .container {
-        @apply
-        px-[20px]
-        md:px-[30px]
-        xl:px-0
-        max-w-[1220px]
+@layer utilities {
+    .content-container {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @screen md {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @screen xl {
+            padding-left: calc((100% - 1220px) / 2);
+            padding-right: calc((100% - 1220px) / 2);
+        }
     }
 }

@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Oswald } from 'next/font/google';
-import './globals.css';
 import { Header } from '@/lib/components/ui';
 import { ReactNode } from 'react';
+
+import './globals.css';
+import { cn } from '@/lib/utils/cn';
 
 export const metadata: Metadata = {
 	title: 'Cat Energy',
@@ -23,7 +25,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${oswald.variable} antialiased`}>
+			<body className={cn(`${oswald.variable} antialiased`)}>
 				<Header />
 				{children}
 			</body>

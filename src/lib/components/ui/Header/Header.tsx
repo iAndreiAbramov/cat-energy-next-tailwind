@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { useInnerWidth } from '@/lib/hooks/useInnerWidth';
 import { Breakpoint } from '@/lib/constants/breakpoint';

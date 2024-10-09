@@ -1,3 +1,5 @@
+import { AppRoute } from '@/lib/constants/app-route';
+
 interface IMenuLink {
 	text: string;
 	href: string;
@@ -6,14 +8,14 @@ interface IMenuLink {
 export const MENU_LINKS: IMenuLink[] = [
 	{
 		text: 'главная',
-		href: '/',
+		href: AppRoute.Home(),
 	},
 	{
 		text: 'каталог продукции',
-		href: '/',
+		href: AppRoute.Catalog(),
 	},
 	{
 		text: 'подбор программы',
-		href: '/',
+		href: AppRoute.Program(),
 	},
 ];
