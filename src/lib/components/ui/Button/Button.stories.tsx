@@ -1,8 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import HamburgerIcon from '@/assets/icons/header/hamburger.svg';
-
 import { Button } from './Button';
+import { HamburgerIcon } from '@/lib/components/ui/Header/components/icons';
 
 const meta = {
 	title: 'UI/Button',

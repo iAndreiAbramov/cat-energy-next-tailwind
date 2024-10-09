@@ -2,6 +2,7 @@
 
 import { ButtonHTMLAttributes, forwardRef, ReactElement } from 'react';
 import './Button.css';
+import { cn } from '@/lib/utils/cn';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'primary' | 'alter' | 'icon';
@@ -10,25 +11,25 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
-	({ variant, text, icon, children, ...props }, ref) => {
+	({ variant, text, icon, children, className, ...props }, ref) => {
 		switch (variant) {
 			case 'primary':
 				return (
-					<button className={'button button--primary'} ref={ref} {...props}>
+					<button {...props} ref={ref} className={cn('button button--primary', className)}>
 						{text ? text : null}
 						{children ? children : null}
 					</button>
 				);
 			case 'alter':
 				return (
-					<button className={'button button--alter'} ref={ref} {...props}>
+					<button {...props} ref={ref} className={cn('button button--alter', className)}>
 						{text ? text : null}
 						{children}
 					</button>
 				);
 			case 'icon':
 				return (
-					<button className={'button-icon'} ref={ref} {...props}>
+					<button {...props} ref={ref} className={cn('button-icon', className)}>
 						{icon ? icon : null}
 					</button>
 				);

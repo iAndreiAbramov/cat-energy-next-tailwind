@@ -1,11 +1,9 @@
-import { Button } from '@/lib/components/ui';
-import HamburgerIcon from '@/assets/icons/header/hamburger.svg';
+import { cn } from '@/lib/utils/cn';
 
 export default function Home() {
 	return (
-		<>
-			<Button variant="primary" text="Подобрать программу" />
-			<Button variant="icon" icon={<HamburgerIcon />} />
-		</>
+		<main className={cn('flex flex-col')}>
+			<span>Page content</span>
+		</main>
 	);
 }
