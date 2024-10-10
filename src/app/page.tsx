@@ -1,5 +1,9 @@
+import { cn } from '@/lib/utils/cn';
+
 export default function Home() {
-  return (
-    <div className="bg-amber-500">Hello</div>
-  );
+	return (
+		<main className={cn('pt-[65px]', 'w-full md:pt-[108px]')}>
+			<span className={cn('content-container')}>Page content</span>
+		</main>
+	);
 }

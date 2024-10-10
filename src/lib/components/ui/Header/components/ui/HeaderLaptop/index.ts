@@ -1,0 +1,1 @@
+export { HeaderLaptop } from './HeaderLaptop';

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input-text {
+        @apply
+        flex items-center
+        w-full
+        px-[20px] py-[10px]
+        border-[1px] border-[#E7E7E7]
+        focus-visible:border-[#444444] focus-visible:outline-none
+        text-[20px] leading-none text-[#444444] uppercase font-normal
+        cursor-pointer
+        transition-colors duration-300
+        ;
+    }
+
+    .input-text--error {
+        @apply
+        border-[1px] border-[#FF8282]
+        focus-visible:border-[#FF8282]
+        ;
+    }
+
+    .error-text {
+        @apply
+        self-end
+        text-[#FF8282] text-[14px] font-normal
+        ;
+    }
+}
