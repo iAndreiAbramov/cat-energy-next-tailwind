@@ -16,6 +16,7 @@ export const HeaderMobile: React.FC = () => {
 				'content-container',
 				'absolute inset-x-0 top-0 z-10',
 				'flex items-center justify-between',
+				'md:display-none',
 				'w-full pb-[18px] pt-[10px]',
 			)}
 		>

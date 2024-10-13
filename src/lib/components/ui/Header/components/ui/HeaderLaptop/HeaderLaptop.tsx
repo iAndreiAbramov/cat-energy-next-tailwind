@@ -23,7 +23,11 @@ export const HeaderLaptop: React.FC = () => {
 			)}
 		>
 			<Link href={AppRoute.Home()}>
-				{innerWidth >= parseInt(Breakpoint.Lg) ? <LogoDesktopIcon /> : <LogoTabletIcon />}
+				{innerWidth !== null && innerWidth >= parseInt(Breakpoint.Lg) ? (
+					<LogoDesktopIcon />
+				) : (
+					<LogoTabletIcon />
+				)}
 			</Link>
 			<nav className={cn('flex items-baseline', 'mt-[20px]')}>
 				<ul className={cn('flex items-baseline gap-[34px]')}>

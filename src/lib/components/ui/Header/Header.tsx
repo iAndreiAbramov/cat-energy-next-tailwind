@@ -7,5 +7,13 @@ import { HeaderMobile } from '@/lib/components/ui/Header/components/ui/HeaderMob
 
 export const Header: React.FC = () => {
 	const innerWidth = useInnerWidth();
-	return <>{innerWidth >= parseInt(Breakpoint.Md) ? <HeaderLaptop /> : <HeaderMobile />}</>;
+	return (
+		<>
+			{innerWidth !== null && innerWidth >= parseInt(Breakpoint.Md) ? (
+				<HeaderLaptop />
+			) : (
+				<HeaderMobile />
+			)}
+		</>
+	);
 };
