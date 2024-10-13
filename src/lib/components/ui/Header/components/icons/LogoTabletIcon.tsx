@@ -1,6 +1,7 @@
 import React from 'react';
+import { IconProps } from '@/lib/types/icon-props';
 
-export const LogoTabletIcon: React.FC = ({ ...props }) => {
+export const LogoTabletIcon: React.FC<IconProps> = ({ className }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +9,7 @@ export const LogoTabletIcon: React.FC = ({ ...props }) => {
 			height="52"
 			fill="none"
 			viewBox="0 0 174 52"
-			{...props}
+			className={className}
 		>
 			<g clipPath="url(#a)">
 				<path

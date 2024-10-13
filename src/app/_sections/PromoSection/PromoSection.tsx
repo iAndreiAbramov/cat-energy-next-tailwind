@@ -14,6 +14,7 @@ export const PromoSection: React.FC = () => {
 				'flex flex-col items-center',
 				'pb-[20px] pt-[28px]',
 				'md:min-h-[860px]',
+				'xl:min-h-[696px]',
 			)}
 		>
 			<h1
@@ -21,28 +22,39 @@ export const PromoSection: React.FC = () => {
 					'text-center text-[36px] font-normal leading-none text-white',
 					'md:self-start',
 					'md:ml-[10%] md:w-[420px]',
-					'text-[60px] leading-none md:text-left md:text-black',
+					'leading-none md:text-[60px]',
+					'md:text-left md:text-black',
+					'xl:ml-[80px] xl:mt-[100px]',
 				)}
 			>
 				Функциональное питание для котов
 			</h1>
 			<span
 				className={cn(
-					'text-shadow',
+					'with-text-shadow',
 					'mb-[20px] mt-[28px]',
 					'text-uppercase text-center font-[14px] text-white',
 					'md:self-start',
-					'md:ml-[10%]',
+					'mb-[50px] mt-[40px] md:ml-[10%]',
 					'md:text-[20px] md:text-black',
+					'xl:ml-[80px]',
 				)}
 			>
+				<style>
+					{`@media (min-width: 768px) and (max-width: 1279px) {
+							.with-text-shadow {
+								text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+							}
+						}`}
+				</style>
 				Занялся собой? Займись котом!
 			</span>
 			<div
 				className={cn(
 					'h-[270px] w-[280px]',
-					'md:absolute md:top-[210px] md:z-[-1]',
+					'md:absolute md:top-[230px] md:z-[-1]',
 					'md:h-[610px] md:w-[710px]',
+					'xl:right-[23%] xl:z-20',
 					'xl:h-[500px] xl:w-[552px]',
 				)}
 			>
@@ -57,9 +69,12 @@ export const PromoSection: React.FC = () => {
 			</div>
 			<Button
 				className={cn(
-					'w-full',
+					'h-[40px] w-full',
+					'text-[14px]',
 					'md:ml-[10%] md:self-start',
-					'md:w-[244px] md:border-[1px] md:border-[#000000]',
+					'h-[54px] md:w-[244px] md:border-[1px] md:border-[#000000]',
+					'md:text-[20px]',
+					'xl:ml-[80px] xl:border-none',
 				)}
 				variant="primary"
 				text="подобрать программу"

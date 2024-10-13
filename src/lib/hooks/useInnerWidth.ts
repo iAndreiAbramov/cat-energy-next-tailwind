@@ -12,8 +12,16 @@ export const useInnerWidth = (): number | null => {
 		};
 
 		window.addEventListener('resize', updateInnerWidth);
+		setTimeout(() => {
+			if (typeof window !== 'undefined') {
+				setInnerWidth(window.innerWidth);
+			}
+		}, 0);
 
-		return () => window.removeEventListener('resize', updateInnerWidth);
+		return () => {
+			window.removeEventListener('resize', updateInnerWidth);
+			window.removeEventListener('load', () => setInnerWidth(window.innerWidth));
+		};
 	});
 
 	return innerWidth;
