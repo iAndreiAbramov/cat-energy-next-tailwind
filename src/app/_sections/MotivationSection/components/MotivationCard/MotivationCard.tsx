@@ -58,6 +58,7 @@ export const MotivationCard: React.FC<MotivationCardProps> = ({
 					'mt-[16px]',
 					'md:mt-0',
 					'xl:mt-[24px]',
+					'transition-opacity duration-300 hover:opacity-80 active:opacity-30',
 				)}
 			>
 				<span
