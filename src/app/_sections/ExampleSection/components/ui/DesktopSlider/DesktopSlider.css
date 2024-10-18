@@ -3,17 +3,15 @@
 @layer components {
     .slider-text {
         font-weight: 400;
-        font-size: 16px;
-        line-height: 125%;
+        font-size: 20px;
         text-transform: uppercase;
         text-align: center;
         color: #000;
-        cursor: pointer;
     }
 
     .slider-image {
-        width: 280px;
-        height: 232px;
+        width: 592px;
+        height: 512px;
         object-fit: contain;
     }
 }

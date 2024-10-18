@@ -13,10 +13,16 @@ export const MobileSlider: React.FC = () => {
 	const [sliderValue, setSliderValue] = useState([0]);
 
 	return (
-		<div className={cn('flex flex-col items-center')}>
-			<div className={cn('relative', 'flex flex-col', 'h-[232px] w-[280px]')}>
+		<div className={cn('flex flex-col items-center', 'mt-[40px]')}>
+			<div
+				className={cn(
+					'relative',
+					'flex flex-col items-center justify-center',
+					'h-[260px] w-[280px]',
+				)}
+			>
 				<div
-					className={cn('absolute inset-0 z-0', {
+					className={cn('absolute inset-0 z-0', 'flex flex-col', {
 						hidden: sliderValue[0] === 100,
 					})}
 				>
@@ -29,7 +35,7 @@ export const MobileSlider: React.FC = () => {
 					/>
 				</div>
 				<div
-					className={cn('absolute inset-0 z-0', {
+					className={cn('absolute inset-0 z-0', 'flex flex-col', {
 						hidden: sliderValue[0] === 0,
 					})}
 				>
@@ -43,7 +49,7 @@ export const MobileSlider: React.FC = () => {
 				</div>
 			</div>
 			<div className={cn('content-container', 'flex justify-center gap-[14px]', 'mt-[16px]')}>
-				<button className={cn('slider-text')} onClick={() => setSliderValue([0])}>
+				<button className={cn('slider-button')} onClick={() => setSliderValue([0])}>
 					Было
 				</button>
 				<Slider.Root
@@ -75,7 +81,7 @@ export const MobileSlider: React.FC = () => {
 						)}
 					/>
 				</Slider.Root>
-				<button className={cn('slider-text')} onClick={() => setSliderValue([100])}>
+				<button className={cn('slider-button')} onClick={() => setSliderValue([100])}>
 					стало
 				</button>
 			</div>

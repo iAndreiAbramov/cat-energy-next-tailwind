@@ -20,7 +20,6 @@ export const useInnerWidth = (): number | null => {
 
 		return () => {
 			window.removeEventListener('resize', updateInnerWidth);
-			window.removeEventListener('load', () => setInnerWidth(window.innerWidth));
 		};
 	});
 

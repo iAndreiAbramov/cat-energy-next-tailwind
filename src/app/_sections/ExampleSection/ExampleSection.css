@@ -10,8 +10,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
         'first second'
-        'third third'
-        ;
+        'third third';
         column-gap: 32px;
         row-gap: 32px;
     }
@@ -19,9 +18,11 @@
     .first-area {
         grid-area: first;
     }
+
     .second-area {
         grid-area: second;
     }
+
     .third-area {
         grid-area: third;
     }
@@ -55,12 +56,33 @@
         color: #444;
     }
 
-    .bordered-item_description{
+    .bordered-item_description {
         font-weight: 400;
         font-size: 24px;
         line-height: 100%;
         text-align: center;
         color: #000;
         text-transform: uppercase;
+    }
+
+    @media screen(md) {
+        .dl-grid-layout {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                'first second third'
+            ;
+            gap: 42px;
+        }
+
+        .bordered-item_title {
+            background-color: #FFFFFF;
+            font-size: 14px;
+            line-height: 100%;
+        }
+
+        .bordered-item_description {
+            font-size: 30px;
+            line-height: 123%;
+        }
     }
 }

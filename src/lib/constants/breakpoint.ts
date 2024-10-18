@@ -1,6 +1,6 @@
 export const Breakpoint = {
-	Md: '768px',
-	Lg: '1024px',
-	Xl: '1280px',
-	['2Xl']: '1536px',
-};
+	Md: 768,
+	Lg: 1024,
+	Xl: 1280,
+	['2Xl']: 1536,
+} as const;
