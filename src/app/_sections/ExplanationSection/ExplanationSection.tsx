@@ -14,6 +14,7 @@ export const ExplanationSection: React.FC = () => {
 				'content-container',
 				'pb-[26px] pt-[20px]',
 				'md:border-b-[1px] md:border-b-[#E6E6E6] md:py-[46px]',
+				'xl:border-none',
 			)}
 		>
 			<h2 className={cn('mb-[40px] md:mb-[32px]', 'text-[36px]/[110%] md:text-[60px]/[100%]')}>

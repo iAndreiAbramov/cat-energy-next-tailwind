@@ -2,10 +2,11 @@ import React from 'react';
 import { cn } from '@/lib/utils/cn';
 import * as Slider from '@radix-ui/react-slider';
 
-import './DesktopSlider.css';
 import Image from 'next/image';
 import fatCat from '@/app/_sections/ExampleSection/assets/images/cat-fat@2x.png';
 import skinnyCat from '@/app/_sections/ExampleSection/assets/images/cat-skinny@2x.png';
+
+import './DesktopSlider.css';
 
 export const DesktopSlider: React.FC = () => {
 	const [sliderValue, setSliderValue] = React.useState([0]);
@@ -13,7 +14,15 @@ export const DesktopSlider: React.FC = () => {
 	const invertedPercentageWidth = 100 - percentageWidth;
 
 	return (
-		<div className={cn('flex flex-col items-center', 'mt-[80px]')}>
+		<div
+			className={cn(
+				'area-slider',
+				'flex flex-col items-center',
+				'mt-[80px]',
+				'xl:mt-0',
+				'xl:justify-self-end',
+			)}
+		>
 			<div className={cn('relative', 'flex flex-col', 'h-[512px] w-[592px]')}>
 				<div
 					className={cn('absolute inset-0 z-0')}
