@@ -57,7 +57,7 @@ export const DesktopSlider: React.FC = () => {
 						'mt-[26px]',
 					)}
 				>
-					<button className={cn('slider-text')} onClick={() => setSliderValue([0])}>
+					<button className={cn('slider-button')} onClick={() => setSliderValue([0])}>
 						Было
 					</button>
 					<Slider.Root
@@ -86,7 +86,7 @@ export const DesktopSlider: React.FC = () => {
 							)}
 						/>
 					</Slider.Root>
-					<button className={cn('slider-text')} onClick={() => setSliderValue([100])}>
+					<button className={cn('slider-button')} onClick={() => setSliderValue([100])}>
 						стало
 					</button>
 				</div>

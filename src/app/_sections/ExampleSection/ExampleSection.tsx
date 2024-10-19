@@ -16,6 +16,8 @@ export const ExampleSection: React.FC = () => {
 			className={cn(
 				'section-grid content-container',
 				'pb-[40px] pt-[24px]',
+				'md:pb-[56px] md:pt-[44px]',
+				'xl:pb-[65px] xl:pt-0',
 				'bg-[#EAEAEA]',
 				'md:bg-gradient-to-b md:from-[#FFFFFF] md:from-[58%] md:via-[#EAEAEA] md:via-[58%] md:to-[#EAEAEA]',
 				'xl:bg-gradient-to-b xl:from-[#FFFFFF] xl:from-[30%] xl:via-[#EAEAEA] xl:via-[30%] xl:to-[#EAEAEA]',
