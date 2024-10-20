@@ -2,6 +2,7 @@ import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { InputText } from './InputText';
+import Icon from 'src/app/program/_components/ui/ProgramForm/assets/icons/icon-email.svg';
 
 const meta = {
 	title: 'UI/InputText',
@@ -26,6 +27,16 @@ export const WithError: Story = {
 		errorText: 'Введите имя',
 		isRequired: true,
 		placeholder: 'Введите имя',
+	},
+	render: (args) => <InputText {...args} />,
+};
+
+export const WithIcon: Story = {
+	args: {
+		labelText: 'Email',
+		isRequired: true,
+		placeholder: 'kuklachev@gmail.com',
+		icon: <Icon />,
 	},
 	render: (args) => <InputText {...args} />,
 };

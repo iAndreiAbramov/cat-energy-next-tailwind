@@ -2,10 +2,10 @@ import React from 'react';
 import { cn } from '@/lib/utils/cn';
 import {
 	AcademyLogoIcon,
+	FbIcon,
 	FooterLogoText,
 	InstaIcon,
 	VkIcon,
-	FbIcon,
 } from '@/lib/components/ui/Footer/components/icons';
 import { MapArticle } from '@/lib/components/ui/Footer/components/ui/MapArticle';
 
