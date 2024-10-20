@@ -1,4 +1,5 @@
-import type { Config } from 'tailwindcss';
+import { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
 	content: [
@@ -14,6 +15,10 @@ const config: Config = {
 				'btn-gray': '#F2F2F2',
 				'btn-gray-darker': '#EBEBEB',
 			},
+			textShadow: {
+				DEFAULT: '0 4px 4px rgba(0, 0, 0, 0.25)',
+				none: 'none',
+			},
 		},
 		screens: {
 			md: '768px',
@@ -25,6 +30,17 @@ const config: Config = {
 			arial: ['Arial', 'sans-serif'],
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ matchUtilities, theme }) {
+			matchUtilities(
+				{
+					'text-shadow': (value) => ({
+						textShadow: value,
+					}),
+				},
+				{ values: theme('textShadow') },
+			);
+		}),
+	],
 };
 export default config;
