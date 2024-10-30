@@ -1,18 +1,31 @@
 'use client';
 import React from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { cn } from '@/lib/utils/cn';
 import { Button, InputText } from '@/lib/components/ui';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
-import { IFormValues } from '@/app/program/_components/ui/ProgramForm/types/i-form-values';
 import { InputRadio } from '@/lib/components/ui/InputRadio';
 import IconEmail from './assets/icons/icon-email.svg';
 import IconPhone from './assets/icons/icon-phone.svg';
 import { InputCheckbox } from '@/lib/components/ui/InputCheckbox';
+import {
+	schemaProgramForm,
+	TFormValues,
+} from '@/app/program/_components/ui/ProgramForm/schema/program-form-schema';
 
 import './ProgramForm.css';
 
 export const ProgramForm: React.FC = () => {
-	const { handleSubmit, register } = useForm<IFormValues>();
+	const {
+		handleSubmit,
+		register,
+		formState: { errors, isSubmitted, isValid },
+	} = useForm<TFormValues>({
+		resolver: zodResolver(schemaProgramForm),
+		defaultValues: {
+			additional: [],
+		},
+	});
 
 	const handleFormSubmit: SubmitHandler<FieldValues> = (values) => {
 		alert(JSON.stringify(values, null, 2));
@@ -35,6 +48,7 @@ export const ProgramForm: React.FC = () => {
 						placeholder="Барсик"
 						isRequired
 						inputMode="text"
+						errorText={errors.name?.message}
 						{...register('name')}
 					/>
 					<InputText
@@ -42,6 +56,7 @@ export const ProgramForm: React.FC = () => {
 						placeholder="7"
 						isRequired
 						inputMode="numeric"
+						errorText={errors.weightKg?.message}
 						{...register('weightKg')}
 					/>
 					<InputText
@@ -49,6 +64,7 @@ export const ProgramForm: React.FC = () => {
 						placeholder="7"
 						isRequired={false}
 						inputMode="numeric"
+						errorText={errors.ageYears?.message}
 						{...register('ageYears')}
 					/>
 				</fieldset>
@@ -90,6 +106,7 @@ export const ProgramForm: React.FC = () => {
 						isRequired
 						inputMode="text"
 						icon={<IconEmail />}
+						errorText={errors.email?.message}
 						{...register('email')}
 					/>
 					<InputText
@@ -98,6 +115,7 @@ export const ProgramForm: React.FC = () => {
 						isRequired
 						inputMode="numeric"
 						icon={<IconPhone />}
+						errorText={errors.phone?.message}
 						{...register('phone')}
 					/>
 				</div>
@@ -150,6 +168,7 @@ export const ProgramForm: React.FC = () => {
 						'md:min-h-[52px] md:w-[282px]',
 						'text-[16px] md:text-[20px]',
 					)}
+					disabled={isSubmitted && !isValid}
 				/>
 				<span className={cn('font-arial text-[14px]/[114%] text-black', 'md:text-[16px]/[100%]')}>
 					* — Обязательные поля

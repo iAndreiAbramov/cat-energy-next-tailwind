@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 export const MapArticle: React.FC = () => {
 	const [isMapZoomDisabled, setIsMapZoomDisabled] = useState(true);
 	const pathName = usePathname();
-	console.log(pathName);
 
 	return (
 		<article className={cn('relative')}>
