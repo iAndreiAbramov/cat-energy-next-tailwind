@@ -14,7 +14,7 @@
 
     .button--primary {
         @apply
-        bg-btn-green hover:bg-btn-green-darker disabled:bg-btn-green-darker
+        bg-btn-green hover:bg-btn-green-darker disabled:bg-btn-green-darker disabled:opacity-40
         text-white  active:text-white/30
         ;
     }

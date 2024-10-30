@@ -1,9 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils/cn';
+import { usePathname } from 'next/navigation';
 
 export const MapArticle: React.FC = () => {
 	const [isMapZoomDisabled, setIsMapZoomDisabled] = useState(true);
+	const pathName = usePathname();
 
 	return (
 		<article className={cn('relative')}>
@@ -14,7 +16,10 @@ export const MapArticle: React.FC = () => {
 					'md:px-[70px] md:py-[56px]',
 					'xl:absolute xl:left-[100px] xl:top-[98px]',
 					'xl:w-[566px] xl:px-[80px] xl:py-[56px]',
-					'xl:bg-white',
+					'bg-[#f2f2f2] xl:bg-white',
+					{
+						'bg-white': pathName === '/',
+					},
 				)}
 			>
 				<h2 className={cn('text-[16px]/[125%] uppercase text-[#111111]', 'md:text-[20px]/[130%]')}>
