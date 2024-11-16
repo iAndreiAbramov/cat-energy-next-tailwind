@@ -1,10 +1,10 @@
 import React from 'react';
-import { cn } from '@/lib/utils/cn';
+import Image from 'next/image';
 import * as Slider from '@radix-ui/react-slider';
 
-import Image from 'next/image';
 import fatCat from '@/app/_sections/ExampleSection/assets/images/cat-fat@2x.png';
 import skinnyCat from '@/app/_sections/ExampleSection/assets/images/cat-skinny@2x.png';
+import { cn } from '@/lib/utils/cn';
 
 import './DesktopSlider.css';
 
@@ -69,7 +69,7 @@ export const DesktopSlider: React.FC = () => {
 					>
 						<Slider.Track
 							className={cn(
-								'h-[6px] w-[426px] rounded-[6px] border-[1px] border-[#cdcdcd]',
+								'h-[6px] w-[426px] rounded-[6px] border border-[#cdcdcd]',
 								'bg-[#DCDCDC]',
 								'cursor-pointer',
 							)}
@@ -79,7 +79,7 @@ export const DesktopSlider: React.FC = () => {
 						<Slider.Thumb
 							className={cn(
 								'relative',
-								'block h-[34px] w-[34px] rounded-full border-[1px] border-[#cdcdcd] bg-[#FFFFFF] p-[10px]',
+								'block h-[34px] w-[34px] rounded-full border border-[#cdcdcd] bg-[#FFFFFF] p-[10px]',
 								'after:absolute after:inset-[12px] after:rounded-full after:bg-[#68b738]',
 								'focus-visible:outline-none',
 								'cursor-pointer',

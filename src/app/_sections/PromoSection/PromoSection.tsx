@@ -1,8 +1,10 @@
 import React from 'react';
-import { cn } from '@/lib/utils/cn';
-import { Button } from '@/lib/components/ui';
-import imageCanDesktop from './assets/images/index-can-desktop.png';
 import Image from 'next/image';
+
+import { Button } from '@/lib/components/ui';
+import { cn } from '@/lib/utils/cn';
+
+import imageCanDesktop from './assets/images/index-can-desktop.png';
 
 import './PromoSection.css';
 
@@ -72,7 +74,7 @@ export const PromoSection: React.FC = () => {
 					'h-[40px] w-full',
 					'text-[14px]',
 					'md:ml-[10%] md:self-start',
-					'h-[54px] md:w-[244px] md:border-[1px] md:border-[#000000]',
+					'h-[54px] md:w-[244px] md:border md:border-[#000000]',
 					'md:text-[20px]',
 					'xl:ml-[80px] xl:border-none',
 				)}

@@ -1,11 +1,12 @@
 import React from 'react';
-import { cn } from '@/lib/utils/cn';
+
 import FirstIcon from '@/app/_sections/ExplanationSection/assets/icons/first-icon.svg';
+import FourthIcon from '@/app/_sections/ExplanationSection/assets/icons/fourth-icon.svg';
 import SecondIcon from '@/app/_sections/ExplanationSection/assets/icons/second-icon.svg';
 import ThirdIcon from '@/app/_sections/ExplanationSection/assets/icons/third-icon.svg';
-import FourthIcon from '@/app/_sections/ExplanationSection/assets/icons/fourth-icon.svg';
 import { ExplanationItem } from '@/app/_sections/ExplanationSection/components/ExplanationItem';
 import { ExplanationText } from '@/app/_sections/ExplanationSection/constants/explanation-text';
+import { cn } from '@/lib/utils/cn';
 
 export const ExplanationSection: React.FC = () => {
 	return (
@@ -13,7 +14,7 @@ export const ExplanationSection: React.FC = () => {
 			className={cn(
 				'content-container',
 				'pb-[26px] pt-[20px]',
-				'md:border-b-[1px] md:border-b-[#E6E6E6] md:py-[46px]',
+				'md:border-b md:border-b-[#E6E6E6] md:py-[46px]',
 				'xl:border-none',
 			)}
 		>

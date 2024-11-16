@@ -1,11 +1,12 @@
-import { IProduct } from '../_types/i-product';
-import chicken500 from '@/app/catalog/_assets/chicken-500.png';
-import chicken1000 from '@/app/catalog/_assets/chicken-1000.png';
-import fish500 from '@/app/catalog/_assets/fish-500.png';
-import fish1000 from '@/app/catalog/_assets/fish-1000.png';
-import buckwheat500 from '@/app/catalog/_assets/buckwheat-500.png';
-import buckwheat1000 from '@/app/catalog/_assets/buckwheat-1000.png';
-import rice500 from '@/app/catalog/_assets/rice-500.png';
+import type { IProduct } from './i-product';
+
+import buckwheat500 from '../../_assets/buckwheat-500.png';
+import buckwheat1000 from '../../_assets/buckwheat-1000.png';
+import chicken500 from '../../_assets/chicken-500.png';
+import chicken1000 from '../../_assets/chicken-1000.png';
+import fish500 from '../../_assets/fish-500.png';
+import fish1000 from '../../_assets/fish-1000.png';
+import rice500 from '../../_assets/rice-500.png';
 
 export const productsMocks: IProduct[] = [
 	{

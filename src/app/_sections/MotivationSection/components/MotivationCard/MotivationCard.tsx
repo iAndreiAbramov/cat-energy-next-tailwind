@@ -1,9 +1,11 @@
 import React from 'react';
-import { cn } from '@/lib/utils/cn';
-import { IconArrow } from '@/app/_sections/MotivationSection/assets/icons';
 import Link from 'next/link';
 
+import { IconArrow } from '@/app/_sections/MotivationSection/assets/icons';
+import { cn } from '@/lib/utils/cn';
+
 import './MotivationCard.css';
+
 import { MotivationCardProps } from '@/app/_sections/MotivationSection/components/MotivationCard/types/motivation-card-props';
 
 export const MotivationCard: React.FC<MotivationCardProps> = ({
@@ -40,7 +42,7 @@ export const MotivationCard: React.FC<MotivationCardProps> = ({
 			<p
 				className={cn(
 					'area-text',
-					'mt-[22px] border-b-[1px] border-b-[#D9D9D9] pb-[24px]',
+					'mt-[22px] border-b border-b-[#D9D9D9] pb-[24px]',
 					'md:self-start',
 					'md:border-none md:pb-0',
 					'xl:mt-[40px]',

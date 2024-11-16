@@ -1,17 +1,20 @@
 'use client';
-import React from 'react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { cn } from '@/lib/utils/cn';
-import { Button, InputText } from '@/lib/components/ui';
+
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
-import { InputRadio } from '@/lib/components/ui/InputRadio';
-import IconEmail from './assets/icons/icon-email.svg';
-import IconPhone from './assets/icons/icon-phone.svg';
-import { InputCheckbox } from '@/lib/components/ui/InputCheckbox';
+import React from 'react';
+
 import {
 	schemaProgramForm,
 	TFormValues,
 } from '@/app/program/_components/ui/ProgramForm/schema/program-form-schema';
+import { Button, InputText } from '@/lib/components/ui';
+import { InputCheckbox } from '@/lib/components/ui/InputCheckbox';
+import { InputRadio } from '@/lib/components/ui/InputRadio';
+import { cn } from '@/lib/utils/cn';
+import { zodResolver } from '@hookform/resolvers/zod';
+
+import IconEmail from './assets/icons/icon-email.svg';
+import IconPhone from './assets/icons/icon-phone.svg';
 
 import './ProgramForm.css';
 
@@ -71,8 +74,8 @@ export const ProgramForm: React.FC = () => {
 				<fieldset
 					className={cn(
 						'p-[20px] md:p-[28px]',
-						'border-y-[1px] border-y-[#D9D9D9]',
-						'md:border-[1px] md:border-[#D9D9D9]',
+						'border-y border-y-[#D9D9D9]',
+						'md:border md:border-[#D9D9D9]',
 						'xl:flex xl:basis-1/2 xl:flex-col xl:content-between',
 					)}
 				>

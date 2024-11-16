@@ -1,9 +1,11 @@
 'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import { cn } from '@/lib/utils/cn';
-import { MENU_LINKS } from '@/lib/components/ui/Header/constants/menu-links';
 import { usePathname } from 'next/navigation';
+
+import { MENU_LINKS } from '@/lib/components/ui/Header/constants/menu-links';
+import { cn } from '@/lib/utils/cn';
 
 export const MobileMenu: React.FC = () => {
 	const pathName = usePathname();
@@ -16,7 +18,7 @@ export const MobileMenu: React.FC = () => {
 						key={text}
 						className={cn(
 							'flex items-center justify-center',
-							'border-t-[1px] border-t-[#E6E6E6] last:border-b-[1px] last:border-b-[#E6E6E6]',
+							'border-t border-t-[#E6E6E6] last:border-b last:border-b-[#E6E6E6]',
 							'text-[20px] font-medium uppercase leading-[100%] text-[#000000]',
 							'hover:bg-gray-100',
 							{

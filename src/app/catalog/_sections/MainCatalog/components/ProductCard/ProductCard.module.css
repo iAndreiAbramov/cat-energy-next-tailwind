@@ -64,7 +64,6 @@
         @apply
         flex justify-between;
         @apply
-        md:pb-[8px]
-        md:border-b-[1px] md:border-b-[#cdcdcd];
+        md:pb-[8px] md:border-b md:border-b-[#cdcdcd];
     }
 }

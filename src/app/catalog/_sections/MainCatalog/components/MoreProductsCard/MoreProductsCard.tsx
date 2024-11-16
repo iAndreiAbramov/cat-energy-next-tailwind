@@ -1,7 +1,9 @@
 import React from 'react';
-import PlusIcon from './assets/plus.svg';
+
 import { Button } from '@/lib/components/ui';
 import { cn } from '@/lib/utils/cn';
+
+import PlusIcon from './assets/plus.svg';
 
 export const MoreProductsCard: React.FC = () => {
 	return (

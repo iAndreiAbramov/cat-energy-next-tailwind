@@ -24,7 +24,30 @@
       }
     }
   ],
+  "importOrder": [
+    "^react-.+$",
+    "^(react/(.*)$)|^(react$)",
+    "^next-.+$",
+    "^(next/(.*)$)|^(next$)",
+    "^@radix-ui/(.*)$",
+    "^tailwind-merge$",
+    "^clsx|lodash-es|class-variance-authority$",
+    "",
+    "^[~/]",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "<BUILTIN_MODULES>",
+    "",
+    "<TYPES>",
+    "",
+    "^../(.*)$",
+    "",
+    "^[./]",
+    "",
+    "^.*[.](css|scss)$"
+  ],
   "plugins": [
-    "prettier-plugin-tailwindcss"
+    "prettier-plugin-tailwindcss",
+    "@ianvs/prettier-plugin-sort-imports"
   ]
 }

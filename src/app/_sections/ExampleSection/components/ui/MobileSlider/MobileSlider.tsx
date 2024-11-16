@@ -1,11 +1,12 @@
 'use client';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { cn } from '@/lib/utils/cn';
 import * as Slider from '@radix-ui/react-slider';
 
 import fatCat from '@/app/_sections/ExampleSection/assets/images/cat-fat@2x.png';
 import skinnyCat from '@/app/_sections/ExampleSection/assets/images/cat-skinny@2x.png';
+import { cn } from '@/lib/utils/cn';
 
 import './MobileSlider.css';
 
@@ -61,7 +62,7 @@ export const MobileSlider: React.FC = () => {
 				>
 					<Slider.Track
 						className={cn(
-							'h-[14px] w-[86px] rounded-[6px] border-[1px] border-[#cdcdcd]',
+							'h-[14px] w-[86px] rounded-[6px] border border-[#cdcdcd]',
 							'bg-white',
 							'cursor-pointer',
 						)}
