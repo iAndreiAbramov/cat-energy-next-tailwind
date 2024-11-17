@@ -1,12 +1,13 @@
 import React from 'react';
 
-import FirstIcon from '@/app/_sections/ExplanationSection/assets/icons/first-icon.svg';
-import FourthIcon from '@/app/_sections/ExplanationSection/assets/icons/fourth-icon.svg';
-import SecondIcon from '@/app/_sections/ExplanationSection/assets/icons/second-icon.svg';
-import ThirdIcon from '@/app/_sections/ExplanationSection/assets/icons/third-icon.svg';
-import { ExplanationItem } from '@/app/_sections/ExplanationSection/components/ExplanationItem';
-import { ExplanationText } from '@/app/_sections/ExplanationSection/constants/explanation-text';
 import { cn } from '@/lib/utils/cn';
+
+import FirstIcon from './assets/icons/first-icon.svg';
+import FourthIcon from './assets/icons/fourth-icon.svg';
+import SecondIcon from './assets/icons/second-icon.svg';
+import ThirdIcon from './assets/icons/third-icon.svg';
+import { ExplanationItem } from './components/ExplanationItem';
+import { ExplanationText } from './constants/explanation-text';
 
 export const ExplanationSection: React.FC = () => {
 	return (

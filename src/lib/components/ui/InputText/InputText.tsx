@@ -1,6 +1,9 @@
 'use client';
+
 import { forwardRef, InputHTMLAttributes, ReactElement } from 'react';
+
 import { cn } from '@/lib/utils/cn';
+
 import './InputText.css';
 
 interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {

@@ -3,6 +3,7 @@ import React from 'react';
 import { cn } from '@/lib/utils/cn';
 
 import GiftIcon from './assets/gift-icon.svg';
+
 import styles from './GiftCard.module.css';
 
 export const GiftCard: React.FC<{ className?: string }> = ({ className }) => {

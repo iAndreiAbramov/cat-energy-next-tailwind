@@ -1,7 +1,9 @@
 'use client';
+
 import React from 'react';
-import { HeaderDesktop } from '@/lib/components/ui/Header/components/ui/HeaderLaptop';
-import { HeaderMobile } from '@/lib/components/ui/Header/components/ui/HeaderMobile';
+
+import { HeaderDesktop } from './components/HeaderDesktop';
+import { HeaderMobile } from './components/HeaderMobile';
 
 export const Header: React.FC = () => {
 	return (

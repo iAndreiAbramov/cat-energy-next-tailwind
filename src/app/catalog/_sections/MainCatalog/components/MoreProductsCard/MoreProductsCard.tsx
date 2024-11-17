@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Button } from '@/lib/components/ui';
 import { cn } from '@/lib/utils/cn';
+import { Button } from '@/lib/components/ui';
 
 import PlusIcon from './assets/plus.svg';
 

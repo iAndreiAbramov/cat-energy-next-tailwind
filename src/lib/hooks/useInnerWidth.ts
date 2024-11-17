@@ -1,4 +1,5 @@
 'use client';
+
 import { useLayoutEffect, useState } from 'react';
 
 export const useInnerWidth = (): number | null => {

@@ -1,5 +1,7 @@
 'use client';
+
 import React, { forwardRef, InputHTMLAttributes } from 'react';
+
 import { cn } from '@/lib/utils/cn';
 
 import './InputRadio.css';

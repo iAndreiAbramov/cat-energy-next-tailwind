@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { Button } from '@/lib/components/ui';
 import { cn } from '@/lib/utils/cn';
+import { Button } from '@/lib/components/ui';
 
 import { IProduct } from '../../i-product';
 

@@ -3,9 +3,10 @@ import React from 'react';
 import { cn } from '@/lib/utils/cn';
 
 import { additionalProductsMocks } from './additional-products-mocks';
-import styles from './AdditionalCatalog.module.css';
 import { AdditionalProductCard } from './components/AdditionalProductCard';
 import { GiftCard } from './components/GiftCard';
+
+import styles from './AdditionalCatalog.module.css';
 
 export const AdditionalCatalog: React.FC = () => {
 	return (

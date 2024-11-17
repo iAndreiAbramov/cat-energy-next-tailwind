@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { productsMocks } from '@/app/catalog/_sections/MainCatalog/products-mocks';
 import { cn } from '@/lib/utils/cn';
 
 import { MoreProductsCard } from './components/MoreProductsCard';
 import { ProductCard } from './components/ProductCard';
+import { productsMocks } from './products-mocks';
+
 import styles from './MainCatalog.module.css';
 
 export const MainCatalog: React.FC = () => {

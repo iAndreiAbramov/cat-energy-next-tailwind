@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { IconProps } from '@/lib/types/icon-props';
 
 export const LogoTabletIcon: React.FC<IconProps> = ({ className }) => {
