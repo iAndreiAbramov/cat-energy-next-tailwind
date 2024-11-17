@@ -1,8 +1,10 @@
-import type { Metadata } from 'next';
-import { Oswald } from 'next/font/google';
-import { Footer, Header } from '@/lib/components/ui';
 import { ReactNode } from 'react';
+import { Oswald } from 'next/font/google';
+
 import { cn } from '@/lib/utils/cn';
+import { Footer, Header } from '@/lib/components/ui';
+
+import type { Metadata } from 'next';
 
 import './globals.css';
 
@@ -25,7 +27,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={cn(`${oswald.variable} antialiased`)}>
+			<body className={cn(`${oswald.variable} antialiased scroll-smooth`)}>
 				<Header />
 				<main className={cn('pt-[65px]', 'w-full md:pt-[108px]')}>{children}</main>
 				<Footer />

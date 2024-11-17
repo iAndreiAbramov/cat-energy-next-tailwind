@@ -1,18 +1,19 @@
 import React from 'react';
+
 import { cn } from '@/lib/utils/cn';
-import { MotivationCard } from '@/app/_sections/MotivationSection/components/MotivationCard';
-import { CardText } from '@/app/_sections/MotivationSection/constants/card-text';
-import { CardTitle } from '@/app/_sections/MotivationSection/constants/card-title';
-import { LinkHref, LinkText } from '@/app/_sections/MotivationSection/constants/card-link';
-import { CatIcon, PumaIcon } from '@/app/_sections/MotivationSection/assets/icons';
+
+import { CatIcon, PumaIcon } from './components/icons';
+import { MotivationCard } from './components/ui/MotivationCard';
+import { LinkHref, LinkText } from './constants/card-link';
+import { CardText } from './constants/card-text';
+import { CardTitle } from './constants/card-title';
 
 export const MotivationSection: React.FC = () => {
 	return (
 		<section
 			className={cn(
 				'content-container',
-				'flex flex-col gap-[20px]',
-				'md:gap-[30px]',
+				'flex flex-col gap-[20px] md:gap-[30px]',
 				'xl:flex-row xl:gap-[80px]',
 				'xl:mt-[80px]',
 			)}

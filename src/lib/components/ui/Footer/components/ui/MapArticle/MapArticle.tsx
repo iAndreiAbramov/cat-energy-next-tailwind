@@ -1,7 +1,9 @@
 'use client';
+
 import React, { useState } from 'react';
-import { cn } from '@/lib/utils/cn';
 import { usePathname } from 'next/navigation';
+
+import { cn } from '@/lib/utils/cn';
 
 export const MapArticle: React.FC = () => {
 	const [isMapZoomDisabled, setIsMapZoomDisabled] = useState(true);
