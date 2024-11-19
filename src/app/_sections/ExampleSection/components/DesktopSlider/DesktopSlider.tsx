@@ -9,7 +9,7 @@ import skinnyCat from '@/app/_sections/ExampleSection/assets/images/cat-skinny@2
 import styles from './DesktopSlider.module.css';
 
 export const DesktopSlider: React.FC<{ className?: string }> = ({ className }) => {
-	const [sliderValue, setSliderValue] = React.useState([0]);
+	const [sliderValue, setSliderValue] = React.useState([0.1]);
 	const percentageWidth = sliderValue[0];
 	const invertedPercentageWidth = 100 - percentageWidth;
 

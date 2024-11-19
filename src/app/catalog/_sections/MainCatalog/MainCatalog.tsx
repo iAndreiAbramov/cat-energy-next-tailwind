@@ -28,15 +28,10 @@ export const MainCatalog: React.FC = () => {
 				)}
 			>
 				{productsMocks.map(
-					({
-						productBrand,
-						productPrice,
-						image,
-						productCategory,
-						productWeight,
-						productTaste,
-						id,
-					}) => (
+					(
+						{ productBrand, productPrice, image, productCategory, productWeight, productTaste, id },
+						index,
+					) => (
 						<li key={id}>
 							<ProductCard
 								id={id}
@@ -46,6 +41,7 @@ export const MainCatalog: React.FC = () => {
 								productWeight={productWeight}
 								productTaste={productTaste}
 								productPrice={productPrice}
+								priority={index < 3}
 							/>
 						</li>
 					),

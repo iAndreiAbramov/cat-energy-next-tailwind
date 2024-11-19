@@ -30,6 +30,7 @@ export const ExampleSection: React.FC = () => {
 			<h2
 				className={cn(
 					styles['area-title'],
+					'xl:flex xl:items-center',
 					'text-[36px]/[111%] font-normal text-black',
 					'md:text-[60px]/[100%]',
 				)}
@@ -39,7 +40,8 @@ export const ExampleSection: React.FC = () => {
 			<p
 				className={cn(
 					styles['area-text'],
-					'mt-[40px] md:mt-[64px] xl:mt-[146px]',
+					'xl:flex xl:items-center',
+					'mt-[40px] md:mt-[64px] xl:mt-0',
 					'font-arial text-[14px]/[130%] text-[#444]',
 					'md:text-[16px]/[150%]',
 				)}
@@ -52,7 +54,7 @@ export const ExampleSection: React.FC = () => {
 				className={cn(
 					styles['area-list'],
 					styles['dl-grid-layout'],
-					'mt-[20px] md:mt-[54px] xl:mt-[68px]',
+					'mt-[20px] md:mt-[54px] xl:mt-0',
 				)}
 			>
 				<div className={cn(styles['first-area'], styles['bordered-item'])}>
@@ -78,15 +80,9 @@ export const ExampleSection: React.FC = () => {
 					<dd className={cn('xl:mr-[48px]')}>15 000 РУБ.</dd>
 				</div>
 			</dl>
-			{innerWidth && (
-				<>
-					{innerWidth >= Breakpoint.Md ? (
-						<DesktopSlider className={styles['area-slider']} />
-					) : (
-						<MobileSlider className={styles['area-slider']} />
-					)}
-				</>
-			)}
+			<div className={cn(styles['area-slider'], 'min-h-[336px] md:min-h-[652px] xl:min-h-[512px]')}>
+				{innerWidth && <>{innerWidth >= Breakpoint.Md ? <DesktopSlider /> : <MobileSlider />}</>}
+			</div>
 		</section>
 	);
 };
