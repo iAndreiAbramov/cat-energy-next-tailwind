@@ -63,6 +63,7 @@ export const PromoSection: React.FC = () => {
 					height={270}
 					sizes="(max-width: 768px) 280px, (max-width: 1280px) 710px, 552px"
 					style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+					priority
 				/>
 			</div>
 			<Link

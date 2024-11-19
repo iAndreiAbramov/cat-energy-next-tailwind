@@ -8,21 +8,22 @@ import { IProduct } from '../../i-product';
 
 import styles from './ProductCard.module.css';
 
-export const ProductCard: React.FC<IProduct> = ({
+export const ProductCard: React.FC<IProduct & { priority: boolean }> = ({
 	productBrand,
 	productCategory,
 	productPrice,
 	productWeight,
 	productTaste,
 	image,
+	priority,
 }) => {
 	return (
 		<article
 			className={cn(
 				styles['card-areas'],
 				'md:flex md:flex-col md:items-center',
-				'px-[20px] pb-[32px] pt-[12px]',
-				'md:px-[36px] md:pb-[40px] md:pt-0',
+				'px-[20px] pb-[32px] pt-[12px] min-h-[280px]',
+				'md:px-[36px] md:pb-[40px] md:pt-0 md:min-h-0',
 				'border-t border-t-[#ebebeb] md:border-none',
 				'md:bg-gradient-to-b md:from-transparent md:from-[80px]',
 				'md:via-[#f2f2f2] md:via-[80px] md:to-[#f2f2f2] md:to-100%',
@@ -32,8 +33,9 @@ export const ProductCard: React.FC<IProduct> = ({
 				src={image}
 				alt={`${productBrand} ${productCategory} ${productTaste} ${productWeight}`}
 				width={140}
-				height={112}
+				height={164}
 				className={cn(`${styles['area-image']}`, 'md:h-[200px] md:w-[168px]')}
+				priority={priority}
 			/>
 			<h3
 				className={cn(

@@ -12,7 +12,9 @@ import skinnyCat from '../../assets/images/cat-skinny@2x.png';
 import styles from './MobileSlider.module.css';
 
 export const MobileSlider: React.FC<{ className?: string }> = ({ className }) => {
-	const [sliderValue, setSliderValue] = useState([0]);
+	const [sliderValue, setSliderValue] = useState([0.01]);
+	const percentageWidth = sliderValue[0];
+	const invertedPercentageWidth = 100 - percentageWidth;
 
 	return (
 		<div className={cn('flex flex-col items-center', 'mt-[40px]', className)}>
@@ -24,9 +26,8 @@ export const MobileSlider: React.FC<{ className?: string }> = ({ className }) =>
 				)}
 			>
 				<div
-					className={cn('absolute inset-0 z-0', 'flex flex-col', {
-						hidden: sliderValue[0] === 100,
-					})}
+					className={cn('absolute inset-0 z-0', 'flex flex-col')}
+					style={{ clipPath: `inset(0 ${percentageWidth}% 0 0)` }}
 				>
 					<Image
 						src={fatCat}
@@ -37,9 +38,8 @@ export const MobileSlider: React.FC<{ className?: string }> = ({ className }) =>
 					/>
 				</div>
 				<div
-					className={cn('absolute inset-0 z-0', 'flex flex-col', {
-						hidden: sliderValue[0] === 0,
-					})}
+					className={cn('absolute inset-0 z-0', 'flex flex-col')}
+					style={{ clipPath: `inset(0 0 0 ${invertedPercentageWidth}%)` }}
 				>
 					<Image
 						src={skinnyCat}
@@ -55,7 +55,7 @@ export const MobileSlider: React.FC<{ className?: string }> = ({ className }) =>
 					Было
 				</button>
 				<Slider.Root
-					defaultValue={[0]}
+					defaultValue={[sliderValue[0]]}
 					step={100}
 					value={sliderValue}
 					onValueChange={(value) => setSliderValue(value)}
@@ -77,8 +77,8 @@ export const MobileSlider: React.FC<{ className?: string }> = ({ className }) =>
 							'focus-visible:outline-none',
 							'cursor-pointer',
 							{
-								'left-1': sliderValue[0] === 0,
-								'right-1': sliderValue[0] === 100,
+								'left-1': Math.round(sliderValue[0]) === 0,
+								'right-1': Math.round(sliderValue[0]) === 100,
 							},
 						)}
 					/>
